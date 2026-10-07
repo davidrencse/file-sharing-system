@@ -1,0 +1,19 @@
+[project]
+name = "telegram-relay"
+version = "0.1.0"
+description = "Desktop file and folder transfers through your Telegram Saved Messages"
+requires-python = ">=3.10"
+dependencies = ["PySide6>=6.7,<7", "Telethon>=1.36,<2"]
+
+[project.optional-dependencies]
+build = ["pyinstaller>=6.0,<7"]
+
+[project.scripts]
+telegram-relay = "telegram_relay.app:main"
+
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
